@@ -11,7 +11,7 @@ public class FoodTrackerController {
     @Autowired
     FoodTrackerService foodTrackerService;
 
-    @GetMapping("foodready/{orderNumber}")
+    @GetMapping("orders/{orderNumber}")
     public String getOrderStatus(@PathVariable int orderNumber) {
         return foodTrackerService.checkOrderStatus(orderNumber);
     }
